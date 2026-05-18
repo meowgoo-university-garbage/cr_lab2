@@ -62,7 +62,7 @@ main = do
   p <- takeRandom keys
   q <- takeRandom keys
   
-  let (keyPub, keyPrv) = rsa_generateFromPrimes p q
+  let (keyPub, _) = rsa_generateFromPrimes p q
   
   let message  = 0xabc
   let cipher   = rsa_encrypt keyPub message
